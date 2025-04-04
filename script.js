@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 3. 上一页/下一页按钮功能
   // 定义页面顺序数组，根据项目实际情况调整
-  const pages = ['index.html', 'introduction.html', 'mechanics.html', 'tutorial.html', 'skills.html', 'extras.html', 'reference.html'];
+  const pages = ['index.html', 'introduction.html', 'mechanics.html', 'tutorial.html', 'skills.html', 'about.html', 'reference.html'];
   const currentIndex = pages.indexOf(currentPath);
   const validIndex = currentIndex !== -1 ? currentIndex : 0;
   const prevPage = validIndex > 0 ? pages[validIndex - 1] : pages[pages.length - 1];
