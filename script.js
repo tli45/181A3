@@ -56,12 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(cornerImage);
   }
 
-  const homeArea = document.getElementById('homeArea'); // 假设你给整个 home 页面容器加了 id="homeArea"
-  if (homeArea) {
-    homeArea.addEventListener('click', function(e) {
-      // 可根据需要阻止默认行为
+  const homeArea = document.getElementById('homeArea');
+if (homeArea) {
+  homeArea.addEventListener('click', function(e) {
+    // 如果点击目标在导航栏内，就不执行跳转
+    if (!e.target.closest('nav')) {
       e.preventDefault();
       window.location.href = 'introduction.html';
-    });
-  }
+    }
+  });
+}
+
 });
