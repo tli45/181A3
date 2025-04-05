@@ -280,7 +280,7 @@ Tutorial页面 - 步骤卡片的网格布局
   
   .force-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;      /* 填充整个容器（也可以用 contain，根据你是否希望图片全部显示） */
     display: block;
   }
