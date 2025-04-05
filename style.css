@@ -271,6 +271,20 @@ Tutorial页面 - 步骤卡片的网格布局
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.force-container {
+    width: 100vw;           /* 占满视口宽度 */
+    height: 100vh;          /* 占满视口高度 */
+    overflow: hidden;       /* 防止图片溢出 */
+    margin-top: 20px;       /* 可根据需要设置与文本的间距 */
+  }
+  
+  .force-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* 填充整个容器（也可以用 contain，根据你是否希望图片全部显示） */
+    display: block;
+  }
+
 /* Video Container */
 .video-container {
     position: relative;
@@ -289,6 +303,23 @@ Tutorial页面 - 步骤卡片的网格布局
     width: 100%;
     height: 100%;
 }
+
+.analysis-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 两列均分 */
+    gap: 20px;                              /* 图片间的间距 */
+    max-width: 100%;                        /* 限制容器宽度 */
+    margin: 20px auto;                      /* 居中显示，并与上下内容留间距 */
+    /* 如果文本框有固定宽度，也可以设置宽度，比如 width: 80%; */
+  }
+  
+  .analysis-container img {
+    width: 100%;          /* 图片充满容器 */
+    height: auto;         /* 高度自适应 */
+    object-fit: contain;  /* 保持图片比例，完全显示图片内容 */
+    display: block;
+  }
+  
 
 /* Footer */
 footer {
